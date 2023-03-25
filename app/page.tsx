@@ -6,6 +6,9 @@ import piggySVG from "../public/piggy.svg";
 import { useEffect, useRef, useState } from "react";
 
 export default function Home() {
+  const [isVisible1, setIsVisible1] = useState(false);
+  const [isVisible2, setIsVisible2] = useState(false);
+  const [isVisible3, setIsVisible3] = useState(false);
   const myRef1 = useRef<HTMLDivElement>(null);
   const myRef2 = useRef<HTMLDivElement>(null);
   const myRef3 = useRef<HTMLDivElement>(null);
@@ -24,8 +27,10 @@ export default function Home() {
         };
         const isIntersecting1 =
           elementRect1.bottom >= 0 && elementRect1.top <= viewRect1.bottom;
-        if (isIntersecting1) {
-          element1.classList.replace("hidden", "appear");
+        if (isIntersecting1 && !isVisible1) {
+          setIsVisible1(true);
+        } else if (!isIntersecting1 && isVisible1) {
+          setIsVisible1(false);
         }
       }
 
@@ -41,8 +46,10 @@ export default function Home() {
         };
         const isIntersecting2 =
           elementRect2.bottom >= 0 && elementRect2.top <= viewRect2.bottom;
-        if (isIntersecting2) {
-          element2.classList.replace("hidden", "appear");
+        if (isIntersecting2 && !isVisible2) {
+          setIsVisible2(true);
+        } else if (!isIntersecting2 && isVisible2) {
+          setIsVisible2(false);
         }
       }
 
@@ -58,67 +65,88 @@ export default function Home() {
         };
         const isIntersecting3 =
           elementRect3.bottom >= 0 && elementRect3.top <= viewRect3.bottom;
-        if (isIntersecting3) {
-          document;
-          element3.classList.replace("hidden", "appear");
+        if (isIntersecting3 && !isVisible3) {
+          setIsVisible3(true);
+        } else if (!isIntersecting3 && isVisible3) {
+          setIsVisible3(false);
         }
       }
     };
     window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
   return (
     <div className="container mt-52 mx-auto">
       <div className="grid grid-cols-1 sm:grid-cols-3">
-        <div ref={myRef1} className="hidden">
-          <Image
-            src={tranlsateSVG}
-            alt="translate"
-            width={150}
-            height={150}
-            className="mx-auto"
-          />
+        <div ref={myRef1}>
+          {
+            // Ref 1
+            isVisible1 ? (
+              <div ref={myRef1} className="appear mt-10 sm:mt-0">
+                <Image
+                  src={tranlsateSVG}
+                  alt="translate"
+                  width={150}
+                  height={150}
+                  className="mx-auto"
+                />
 
-          <p className="text-center mt-24">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            Consequatur suscipit quod unde corporis delectus similique enim odio
-            vel saepe maxime modi, perspiciatis officiis incidunt natus officia,
-            voluptate, quia, voluptas quas.
-          </p>
+                <p className="text-center mt-24">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Consequatur suscipit quod unde corporis delectus similique
+                  enim odio vel saepe maxime modi, perspiciatis officiis
+                  incidunt natus officia, voluptate, quia, voluptas quas.
+                </p>
+              </div>
+            ) : null
+          }
         </div>
-        <div ref={myRef2} className="hidden">
-          <Image
-            src={rocketSVG}
-            alt="rocket"
-            width={150}
-            height={150}
-            className="mx-auto"
-          />
+        <div ref={myRef2}>
+          {
+            // Ref 2
+            isVisible2 ? (
+              <div ref={myRef2} className="appear mt-10 sm:mt-0">
+                <Image
+                  src={rocketSVG}
+                  alt="rocket"
+                  width={150}
+                  height={150}
+                  className="mx-auto"
+                />
 
-          <p className="text-center mt-24">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            Consequatur suscipit quod unde corporis delectus similique enim odio
-            vel saepe maxime modi, perspiciatis officiis incidunt natus officia,
-            voluptate, quia, voluptas quas.
-          </p>
+                <p className="text-center mt-24">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Consequatur suscipit quod unde corporis delectus similique
+                  enim odio vel saepe maxime modi, perspiciatis officiis
+                  incidunt natus officia, voluptate, quia, voluptas quas.
+                </p>
+              </div>
+            ) : null
+          }
         </div>
-        <div ref={myRef3} className="hidden">
-          <Image
-            src={piggySVG}
-            alt="piggy"
-            width={150}
-            height={150}
-            className="mx-auto"
-          />
 
-          <p className="text-center mt-24">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            Consequatur suscipit quod unde corporis delectus similique enim odio
-            vel saepe maxime modi, perspiciatis officiis incidunt natus officia,
-            voluptate, quia, voluptas quas.
-          </p>
+        <div ref={myRef3}>
+          {
+            // Ref 3
+            isVisible3 ? (
+              <div ref={myRef3} className="appear mt-10 sm:mt-0">
+                <Image
+                  src={piggySVG}
+                  alt="piggy"
+                  width={150}
+                  height={150}
+                  className="mx-auto"
+                />
+
+                <p className="text-center mt-24">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Consequatur suscipit quod unde corporis delectus similique
+                  enim odio vel saepe maxime modi, perspiciatis officiis
+                  incidunt natus officia, voluptate, quia, voluptas quas.
+                </p>
+              </div>
+            ) : null
+          }
         </div>
       </div>
     </div>
