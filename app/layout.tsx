@@ -49,6 +49,12 @@ export default function RootLayout({
         <div className="contanier mt-36 text-center text-3xl">
           <h1 className="mainPageText">Profesyonel Döküman Çeviri Hizmeti</h1>
         </div>
+        <div className="container mt-10 text-center mx-auto">
+          <button className="hover-underline-animation text-xl ">
+            Hemen Fiyat Al
+          </button>
+        </div>
+
         {children}
       </body>
     </html>

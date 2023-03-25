@@ -14,7 +14,7 @@ html,body{
     font-family: 'Oswald', sans-serif;
 }
 .linear-bg {
-    background: linear-gradient(270deg, #ffffff, #e4e4e4, #dedcdc);
+    background: linear-gradient(270deg, #ffffff, #e4e4e4, #cecdcd);
     background-size: 600% 600%;
 
     -webkit-animation: AnimationName 10s ease infinite;
