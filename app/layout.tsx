@@ -10,7 +10,7 @@ export default function RootLayout({
       <head>
         <link rel="stylesheet" href="global.css" />
       </head>
-      <body>
+      <body className="linear-bg">
         <div className="container">
           <div className="grid xl:grid-cols-2 sm:grid-cols-2 gap-4 mt-20">
             <div className="text-3xl font-bold mx-10 flex md:mx-20 text-center">

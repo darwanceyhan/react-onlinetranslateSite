@@ -1,3 +1,41 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html{
+    scroll-behavior: smooth;
+}
+
+html,body{
+    height: 100%;
+}
+.linear-bg{
+    background: linear-gradient(292deg, #ffffff, #d7d7d7, #232222) fixed no-repeat center center;
+    background-size: 600% 600%;
+
+    -webkit-animation: background 17s ease infinite;
+    -moz-animation: background 17s ease infinite;
+    -o-animation: background 17s ease infinite;
+    animation: background 17s ease infinite;
+}
+
+@-webkit-keyframes background {
+    0%{background-position:57% 0%}
+    50%{background-position:44% 100%}
+    100%{background-position:57% 0%}
+}
+@-moz-keyframes background {
+    0%{background-position:57% 0%}
+    50%{background-position:44% 100%}
+    100%{background-position:57% 0%}
+}
+@-o-keyframes background {
+    0%{background-position:57% 0%}
+    50%{background-position:44% 100%}
+    100%{background-position:57% 0%}
+}
+@keyframes background {
+    0%{background-position:57% 0%}
+    50%{background-position:44% 100%}
+    100%{background-position:57% 0%}
+}
