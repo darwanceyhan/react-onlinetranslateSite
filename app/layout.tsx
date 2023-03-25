@@ -12,6 +12,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <link rel="stylesheet" href="global.css" />
       <body>{children}</body>
     </html>
   );
