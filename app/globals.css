@@ -10,7 +10,7 @@ html,body{
     height: 100%;
 }
 .linear-bg{
-    background: linear-gradient(292deg, #ffffff, #d7d7d7, #232222) fixed no-repeat center center;
+    background: linear-gradient(292deg, #ffffff, #d7d7d7, #a2a2a2) fixed no-repeat center center;
     background-size: 600% 600%;
 
     -webkit-animation: background 17s ease infinite;
@@ -42,6 +42,7 @@ html,body{
 
 .navbar-items{
     text-shadow: 1px 0px 1px #000;
+    font-size: 1.2rem;
 
 }
 .hover-underline-animation {
@@ -66,4 +67,9 @@ html,body{
   .hover-underline-animation:hover::after {
     transform: scaleX(1);
     transform-origin: bottom left;
+  }
+
+  .mainPageText{
+    color: #000000;
+text-shadow: 1px 3px 0 #969696, 1px 13px 5px #aba8a8;
   }

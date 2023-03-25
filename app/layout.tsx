@@ -11,9 +11,9 @@ export default function RootLayout({
         <link rel="stylesheet" href="global.css" />
       </head>
       <body className="linear-bg">
-        <div className="container fixed">
+        <div className="container">
           <div className="grid xl:grid-cols-2 sm:grid-cols-2 gap-4 mt-20">
-            <div className="text-3xl font-bold mx-10 flex md:mx-20 text-center">
+            <div className="text-3xl font-bold mx-10 flex md:mx-20 text-center cursor-pointer hover:scale-105 transition-all">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -33,15 +33,18 @@ export default function RootLayout({
             <div className="grid sm:grid-cols-2 grid-cols-1 gap-5 text-center">
               <div></div>
               <div className="grid grid-cols-2 gap-5">
-                <div className="text-center navbar-items hover-underline-animation">
-                  İletişim
+                <div className="text-center navbar-items hover-underline-animation cursor-pointer">
+                  <h2>İletişim</h2>
                 </div>
-                <div className="text-center navbar-items hover-underline-animation">
-                  Hakkımızda
+                <div className="text-center navbar-items hover-underline-animation cursor-pointer">
+                  <h2>Hakkımızda</h2>
                 </div>
               </div>
             </div>
           </div>
+        </div>
+        <div className="contanier mt-36 text-center text-3xl">
+          <h1 className="mainPageText">Profesyonel Döküman Çeviri Hizmeti</h1>
         </div>
         {children}
       </body>
