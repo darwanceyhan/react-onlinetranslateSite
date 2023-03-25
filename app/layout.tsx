@@ -9,6 +9,9 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="stylesheet" href="global.css" />
+
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
       <body className="linear-bg">
         <div className="container">

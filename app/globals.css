@@ -1,6 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
+
 
 html{
     scroll-behavior: smooth;
@@ -8,36 +10,32 @@ html{
 
 html,body{
     height: 100%;
+    width: 100%;
+    font-family: 'Oswald', sans-serif;
 }
-.linear-bg{
-    background: linear-gradient(292deg, #ffffff, #d7d7d7, #a2a2a2) fixed no-repeat center center;
+.linear-bg {
+    background: linear-gradient(270deg, #ffffff, #e4e4e4, #dedcdc);
     background-size: 600% 600%;
 
-    -webkit-animation: background 17s ease infinite;
-    -moz-animation: background 17s ease infinite;
-    -o-animation: background 17s ease infinite;
-    animation: background 17s ease infinite;
+    -webkit-animation: AnimationName 10s ease infinite;
+    -moz-animation: AnimationName 10s ease infinite;
+    animation: AnimationName 10s ease infinite;
 }
 
-@-webkit-keyframes background {
-    0%{background-position:57% 0%}
-    50%{background-position:44% 100%}
-    100%{background-position:57% 0%}
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
 }
-@-moz-keyframes background {
-    0%{background-position:57% 0%}
-    50%{background-position:44% 100%}
-    100%{background-position:57% 0%}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
 }
-@-o-keyframes background {
-    0%{background-position:57% 0%}
-    50%{background-position:44% 100%}
-    100%{background-position:57% 0%}
-}
-@keyframes background {
-    0%{background-position:57% 0%}
-    50%{background-position:44% 100%}
-    100%{background-position:57% 0%}
+@keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
 }
 
 .navbar-items{
@@ -70,6 +68,24 @@ html,body{
   }
 
   .mainPageText{
-    color: #000000;
-text-shadow: 1px 3px 0 #969696, 1px 13px 5px #aba8a8;
+    color: #131313;
+    
+    letter-spacing: .15em;
+    text-shadow: 2px 2px 0 #bcbcbc, 4px 4px 0 #9c9c9c;
+    color: #131313;
+    display: inline-block;
+	padding-bottom: 3px;
+   
   }
+ 
+.mainPageText:after {
+	content: '';
+	display: block;
+	margin: 10px;
+	height: 1px;
+	animation: underline 2s infinite;
+}
+@keyframes underline {
+  0% { width: 0%; background-color: black;}
+  100% {width: 100%; background-color: transparent;}
+}
