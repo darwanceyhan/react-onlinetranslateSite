@@ -36,12 +36,12 @@ export default function RootLayout({
             <div className="grid sm:grid-cols-2 grid-cols-1 gap-5 text-center">
               <div></div>
               <div className="grid grid-cols-2 gap-5">
-                <div className="text-center navbar-items hover-underline-animation cursor-pointer">
-                  <h2>İletişim</h2>
-                </div>
-                <div className="text-center navbar-items hover-underline-animation cursor-pointer">
-                  <h2>Hakkımızda</h2>
-                </div>
+                <button className="hover-underline-animation text-xl border-l-2 border-black pl-2">
+                  İletişim
+                </button>
+                <button className="hover-underline-animation text-xl border-l-2 border-black pl-2">
+                  Hakkımızda
+                </button>
               </div>
             </div>
           </div>
@@ -50,7 +50,7 @@ export default function RootLayout({
           <h1 className="mainPageText">Profesyonel Döküman Çeviri Hizmeti</h1>
         </div>
         <div className="container mt-10 text-center mx-auto">
-          <button className="hover-underline-animation text-xl ">
+          <button className="hover-underline-animation text-xl border-l-2 border-black pl-2">
             Hemen Fiyat Al
           </button>
         </div>
