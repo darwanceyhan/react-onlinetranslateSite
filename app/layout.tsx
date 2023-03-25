@@ -11,7 +11,7 @@ export default function RootLayout({
         <link rel="stylesheet" href="global.css" />
       </head>
       <body className="linear-bg">
-        <div className="container">
+        <div className="container fixed">
           <div className="grid xl:grid-cols-2 sm:grid-cols-2 gap-4 mt-20">
             <div className="text-3xl font-bold mx-10 flex md:mx-20 text-center">
               <svg
@@ -33,8 +33,12 @@ export default function RootLayout({
             <div className="grid sm:grid-cols-2 grid-cols-1 gap-5 text-center">
               <div></div>
               <div className="grid grid-cols-2 gap-5">
-                <div className="text-center">İletişim</div>
-                <div className="text-center">Hakkımızda</div>
+                <div className="text-center navbar-items hover-underline-animation">
+                  İletişim
+                </div>
+                <div className="text-center navbar-items hover-underline-animation">
+                  Hakkımızda
+                </div>
               </div>
             </div>
           </div>

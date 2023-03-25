@@ -39,3 +39,31 @@ html,body{
     50%{background-position:44% 100%}
     100%{background-position:57% 0%}
 }
+
+.navbar-items{
+    text-shadow: 1px 0px 1px #000;
+
+}
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+    color: #000000;
+  }
+  
+  .hover-underline-animation::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: #000000;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .hover-underline-animation:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
