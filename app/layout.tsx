@@ -7,10 +7,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="tr">
       <head>
         <link rel="stylesheet" href="global.css" />
-
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
@@ -59,7 +58,7 @@ export default function RootLayout({
 
         {children}
         <footer className="h-28 mt-40 grid">
-          <div className="mt-20 bg-black grid text-white w-auto h-full text-center text-xl content-center">
+          <div className="mt-20 bg-black grid text-white w-auto h-full text-center text-base content-center">
             <h1>ONLINE TRANSLATE © 2021. Tüm hakları saklıdır. | </h1>
           </div>
         </footer>
