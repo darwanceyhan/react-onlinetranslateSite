@@ -4,17 +4,26 @@ import tranlsateSVG from "../public/translate.svg";
 import rocketSVG from "../public/rocket.svg";
 import piggySVG from "../public/piggy.svg";
 import { useEffect, useRef, useState } from "react";
+import Link from "next/link";
 
 export default function Home() {
   const [isVisible3, setIsVisible3] = useState(false);
   const [isVisible2, setIsVisible2] = useState(false);
   const [isVisible1, setIsVisible1] = useState(false);
+  const [isLogged, setIsLogged] = useState(false);
   const myRef1 = useRef<HTMLDivElement>(null);
   const myRef2 = useRef<HTMLDivElement>(null);
   const myRef3 = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
+      localStorage.setItem("isLogged", "true");
+      if (localStorage.getItem("isLogged") === "true") {
+        setIsLogged(true);
+      } else {
+        setIsLogged(false);
+      }
+
       // Ref 1
       const element1 = myRef1.current;
       if (element1) {
@@ -76,12 +85,16 @@ export default function Home() {
   return (
     <>
       <div className="contanier mt-36 text-center text-3xl">
-        <h1 className="mainPageText">Profesyonel Döküman Çeviri Hizmeti</h1>
+        <h1 className="mainPageText cursor-pointer">
+          Profesyonel Döküman Çeviri Hizmeti
+        </h1>
       </div>
       <div className="container mt-10 text-center mx-auto">
-        <button className="hover-underline-animation text-xl border-l-2 border-black pl-4 p-2 text-center">
-          Hemen Fiyat Al
-        </button>
+        <Link href={`/${isLogged ? "getaprice " : "login"}`}>
+          <button className="hover-underline-animation text-xl border-l-2 border-black pl-4 p-2 text-center">
+            Hemen Fiyat Alın
+          </button>
+        </Link>
       </div>
       <div className="container mt-52 mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-3">
