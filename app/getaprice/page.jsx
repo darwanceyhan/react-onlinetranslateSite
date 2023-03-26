@@ -1,11 +1,57 @@
 "use client";
-import React from "react";
-import { useState } from "react";
 
-const GetaPrice = () => {
-  const [file, setFile] = useState(null);
+import React, { useEffect } from "react";
+import { useState } from "react";
+import mammoth from "mammoth";
+import JSZip from "jszip";
+
+function GetaPrice() {
+  const [count, setCount] = useState(0);
   const [language, setLanguage] = useState(null);
   const [price, setPrice] = useState(null);
+  useEffect(() => {
+    console.log(mammoth);
+  }, []);
+
+  async function readDocxAndTxtFile(file) {
+    const reader = new FileReader();
+    const content = await new Promise((resolve, reject) => {
+      reader.onerror = () => {
+        reader.abort();
+        reject(new Error("Failed to read file"));
+      };
+
+      reader.onload = () => {
+        resolve(reader.result);
+      };
+
+      reader.readAsArrayBuffer(file);
+    });
+
+    const buffer = new Uint8Array(content);
+    const type = file.type;
+    let text;
+
+    if (
+      type ===
+      "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+    ) {
+      const zip = await JSZip.loadAsync(buffer);
+      const doc = await zip.file("word/document.xml").async("string");
+      const matches = doc.match(/<w:t[^>]*>(.*?)<\/w:t>/g);
+      text = matches
+        ? matches.map((match) => match.replace(/<\/?w:t[^>]*>/g, "")).join(" ")
+        : "";
+    } else if (type === "text/plain") {
+      text = new TextDecoder().decode(buffer);
+    } else {
+      throw new Error("Invalid file type");
+    }
+
+    const wordCount = text.split(/\s+/).length;
+    console.log(wordCount);
+    return wordCount;
+  }
   return (
     <div className="w-full h-3/6 mx-auto mt-56">
       <div className="w-4/5 h-2/5 grid grid-cols-1 sm:grid-cols-3 mx-auto">
@@ -43,6 +89,11 @@ const GetaPrice = () => {
       <div className="w-4/5 h-3/5 grid grid-cols-1 sm:grid-cols-2 mx-auto mt-10 sm:mt-10 place-content-center">
         <div className="mx-auto">
           <input
+            onChange={(e) => {
+              readDocxAndTxtFile(e.target.files[0]).then((text) => {
+                setCount(text);
+              });
+            }}
             accept=".docx, .txt, .doc"
             type="file"
             className="block w-full text-sm text-slate-500
@@ -95,5 +146,5 @@ const GetaPrice = () => {
       </div>
     </div>
   );
-};
+}
 export default GetaPrice;

@@ -1,3 +1,10 @@
 {
-  "extends": "airbnb"
+  "extends": "airbnb",
+  "rules": {
+    "singleQuote": true,
+    "semi": false,
+    "comma-dangle": false,
+    "no-console": false,
+    "no-unused-vars": false
+  }
 }
