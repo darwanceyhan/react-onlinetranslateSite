@@ -41,10 +41,10 @@ export default function RootLayout({
                 </button>
 
                 <button className="hover-underline-animation text-base border-l-2 border-black pl-2">
-                  İletişim
+                  Hakkımızda
                 </button>
                 <button className="hover-underline-animation text-base border-l-2 border-black pl-2">
-                  Hakkımızda
+                  İletişim
                 </button>
               </div>
             </div>
