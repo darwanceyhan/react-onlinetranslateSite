@@ -74,88 +74,98 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="container mt-52 mx-auto">
-      <div className="grid grid-cols-1 sm:grid-cols-3">
-        <div ref={myRef1}>
-          {
-            // Ref 1
-            isVisible1 ? (
-              <div ref={myRef1} className="appear mt-40 sm:mt-0">
-                <Image
-                  src={tranlsateSVG}
-                  alt="translate"
-                  width={150}
-                  height={150}
-                  className="mx-auto"
-                />
-                <h1 className="text-2xl font-bold mt-10 text-center">
-                  Profesyonel Düzeyde Çeviri Hizmeti Sunuyoruz !
-                </h1>
+    <>
+      <div className="contanier mt-36 text-center text-3xl">
+        <h1 className="mainPageText">Profesyonel Döküman Çeviri Hizmeti</h1>
+      </div>
+      <div className="container mt-10 text-center mx-auto">
+        <button className="hover-underline-animation text-xl border-l-2 border-black pl-4 p-2 text-center">
+          Hemen Fiyat Al
+        </button>
+      </div>
+      <div className="container mt-52 mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-3">
+          <div ref={myRef1}>
+            {
+              // Ref 1
+              isVisible1 ? (
+                <div ref={myRef1} className="appear mt-40 sm:mt-0">
+                  <Image
+                    src={tranlsateSVG}
+                    alt="translate"
+                    width={150}
+                    height={150}
+                    className="mx-auto"
+                  />
+                  <h1 className="text-2xl font-bold mt-10 text-center">
+                    Profesyonel Düzeyde Çeviri Hizmeti Sunuyoruz !
+                  </h1>
 
-                <p className="text-center mt-24 font-semibold">
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Consequatur suscipit quod unde corporis delectus similique
-                  enim odio vel saepe maxime modi, perspiciatis officiis
-                  incidunt natus officia, voluptate, quia, voluptas quas.
-                </p>
-              </div>
-            ) : null
-          }
-        </div>
-        <div ref={myRef2}>
-          {
-            // Ref 2
-            isVisible2 ? (
-              <div ref={myRef2} className="appear mt-40 sm:mt-0">
-                <Image
-                  src={rocketSVG}
-                  alt="rocket"
-                  width={150}
-                  height={150}
-                  className="mx-auto"
-                />
-                <h1 className="text-2xl font-bold mt-10 text-center">
-                  Hızlı Çeviri Süresi ile sektörde öncüyüz !
-                </h1>
+                  <p className="text-center mt-24 font-semibold">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Consequatur suscipit quod unde corporis delectus similique
+                    enim odio vel saepe maxime modi, perspiciatis officiis
+                    incidunt natus officia, voluptate, quia, voluptas quas.
+                  </p>
+                </div>
+              ) : null
+            }
+          </div>
+          <div ref={myRef2}>
+            {
+              // Ref 2
+              isVisible2 ? (
+                <div ref={myRef2} className="appear mt-40 sm:mt-0">
+                  <Image
+                    src={rocketSVG}
+                    alt="rocket"
+                    width={150}
+                    height={150}
+                    className="mx-auto"
+                  />
+                  <h1 className="text-2xl font-bold mt-10 text-center">
+                    Hızlı Çeviri Süresi ile sektörde öncüyüz !
+                  </h1>
 
-                <p className="text-center mt-24 font-semibold">
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Consequatur suscipit quod unde corporis delectus similique
-                  enim odio vel saepe maxime modi, perspiciatis officiis
-                  incidunt natus officia, voluptate, quia, voluptas quas.
-                </p>
-              </div>
-            ) : null
-          }
-        </div>
+                  <p className="text-center mt-24 font-semibold">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Consequatur suscipit quod unde corporis delectus similique
+                    enim odio vel saepe maxime modi, perspiciatis officiis
+                    incidunt natus officia, voluptate, quia, voluptas quas.
+                  </p>
+                </div>
+              ) : null
+            }
+          </div>
 
-        <div ref={myRef3}>
-          {
-            // Ref 3
-            isVisible3 ? (
-              <div ref={myRef3} className="appear mt-40 sm:mt-0">
-                <Image
-                  src={piggySVG}
-                  alt="piggy"
-                  width={150}
-                  height={150}
-                  className="mx-auto"
-                />
-                <h1 className="text-2xl font-bold mt-10 text-center">
-                  En uygun fiyatlarla rakiplerimizden farklıyız !
-                </h1>
+          <div ref={myRef3}>
+            {
+              // Ref 3
+              isVisible3 ? (
+                <div ref={myRef3} className="appear mt-40 sm:mt-0">
+                  <Image
+                    src={piggySVG}
+                    alt="piggy"
+                    width={150}
+                    height={150}
+                    className="mx-auto"
+                  />
+                  <h1 className="text-2xl font-bold mt-10 text-center">
+                    En uygun fiyatlarla rakiplerimizden farklıyız !
+                  </h1>
 
-                <p className="text-center mt-24 font-semibold">
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Consequatur suscipit quod unde corporis delectus similique
-                  enim odio vel saepe maxime modi, perspiciatis officiis
-                  incidunt natus officia, voluptate, quia, voluptas quas.
-                </p>
-              </div>
-            ) : null
-          }
+                  <p className="text-center mt-24 font-semibold">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Consequatur suscipit quod unde corporis delectus similique
+                    enim odio vel saepe maxime modi, perspiciatis officiis
+                    incidunt natus officia, voluptate, quia, voluptas quas.
+                  </p>
+                </div>
+              ) : null
+            }
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
