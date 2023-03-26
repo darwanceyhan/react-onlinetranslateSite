@@ -54,8 +54,12 @@ export default function RootLayout({
             Hemen Fiyat Al
           </button>
         </div>
-
         {children}
+        <footer className="h-28 mt-40 grid">
+          <div className="mt-20 bg-black grid text-white w-auto h-full text-center text-xl content-center">
+            <h1>ONLINE TRANSLATE © 2021. Tüm hakları saklıdır. | </h1>
+          </div>
+        </footer>
       </body>
     </html>
   );
