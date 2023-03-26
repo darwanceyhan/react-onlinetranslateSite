@@ -6,9 +6,9 @@ import piggySVG from "../public/piggy.svg";
 import { useEffect, useRef, useState } from "react";
 
 export default function Home() {
-  const [isVisible1, setIsVisible1] = useState(false);
-  const [isVisible2, setIsVisible2] = useState(false);
   const [isVisible3, setIsVisible3] = useState(false);
+  const [isVisible2, setIsVisible2] = useState(false);
+  const [isVisible1, setIsVisible1] = useState(false);
   const myRef1 = useRef<HTMLDivElement>(null);
   const myRef2 = useRef<HTMLDivElement>(null);
   const myRef3 = useRef<HTMLDivElement>(null);
@@ -27,10 +27,8 @@ export default function Home() {
         };
         const isIntersecting1 =
           elementRect1.bottom >= 0 && elementRect1.top <= viewRect1.bottom;
-        if (isIntersecting1 && !isVisible1) {
+        if (isIntersecting1) {
           setIsVisible1(true);
-        } else if (!isIntersecting1 && isVisible1) {
-          setIsVisible1(false);
         }
       }
 
@@ -46,10 +44,9 @@ export default function Home() {
         };
         const isIntersecting2 =
           elementRect2.bottom >= 0 && elementRect2.top <= viewRect2.bottom;
-        if (isIntersecting2 && !isVisible2) {
+
+        if (isIntersecting2) {
           setIsVisible2(true);
-        } else if (!isIntersecting2 && isVisible2) {
-          setIsVisible2(false);
         }
       }
 
@@ -65,16 +62,17 @@ export default function Home() {
         };
         const isIntersecting3 =
           elementRect3.bottom >= 0 && elementRect3.top <= viewRect3.bottom;
-        if (isIntersecting3 && !isVisible3) {
+        if (isIntersecting3) {
           setIsVisible3(true);
-        } else if (!isIntersecting3 && isVisible3) {
-          setIsVisible3(false);
         }
       }
     };
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
+
   return (
     <div className="container mt-52 mx-auto">
       <div className="grid grid-cols-1 sm:grid-cols-3">
@@ -82,7 +80,7 @@ export default function Home() {
           {
             // Ref 1
             isVisible1 ? (
-              <div ref={myRef1} className="appear mt-10 sm:mt-0">
+              <div ref={myRef1} className="appear mt-40 sm:mt-0">
                 <Image
                   src={tranlsateSVG}
                   alt="translate"
@@ -105,7 +103,7 @@ export default function Home() {
           {
             // Ref 2
             isVisible2 ? (
-              <div ref={myRef2} className="appear mt-10 sm:mt-0">
+              <div ref={myRef2} className="appear mt-40 sm:mt-0">
                 <Image
                   src={rocketSVG}
                   alt="rocket"
@@ -129,7 +127,7 @@ export default function Home() {
           {
             // Ref 3
             isVisible3 ? (
-              <div ref={myRef3} className="appear mt-10 sm:mt-0">
+              <div ref={myRef3} className="appear mt-40 sm:mt-0">
                 <Image
                   src={piggySVG}
                   alt="piggy"
