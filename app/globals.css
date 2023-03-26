@@ -13,8 +13,9 @@ html,body{
     width: 100%;
     font-family: 'Oswald', sans-serif;
 }
+
 .linear-bg {
-    background: linear-gradient(270deg, #ffffff, #e4e4e4, #cecdcd);
+    background: linear-gradient(350deg, #ffffff, #e4e4e4, #b7b6b6);
     background-size: 600% 600%;
 
     -webkit-animation: AnimationName 10s ease infinite;
@@ -93,6 +94,15 @@ html,body{
 .appear{
     animation: appear 1s ease-in-out;
     animation-fill-mode: forwards;
+    transition: all 0.2s ease-in-out;
+    position: relative;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+.appear:hover{
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
 @keyframes appear {

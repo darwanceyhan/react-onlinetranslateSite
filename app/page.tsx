@@ -88,8 +88,11 @@ export default function Home() {
                   height={150}
                   className="mx-auto"
                 />
+                <h1 className="text-2xl font-bold mt-10 text-center">
+                  Profesyonel Düzeyde Çeviri Hizmeti Sunuyoruz !
+                </h1>
 
-                <p className="text-center mt-24">
+                <p className="text-center mt-24 font-semibold">
                   Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                   Consequatur suscipit quod unde corporis delectus similique
                   enim odio vel saepe maxime modi, perspiciatis officiis
@@ -111,8 +114,11 @@ export default function Home() {
                   height={150}
                   className="mx-auto"
                 />
+                <h1 className="text-2xl font-bold mt-10 text-center">
+                  Hızlı Çeviri Süresi ile sektörde öncüyüz !
+                </h1>
 
-                <p className="text-center mt-24">
+                <p className="text-center mt-24 font-semibold">
                   Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                   Consequatur suscipit quod unde corporis delectus similique
                   enim odio vel saepe maxime modi, perspiciatis officiis
@@ -135,8 +141,11 @@ export default function Home() {
                   height={150}
                   className="mx-auto"
                 />
+                <h1 className="text-2xl font-bold mt-10 text-center">
+                  En uygun fiyatlarla rakiplerimizden farklıyız !
+                </h1>
 
-                <p className="text-center mt-24">
+                <p className="text-center mt-24 font-semibold">
                   Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                   Consequatur suscipit quod unde corporis delectus similique
                   enim odio vel saepe maxime modi, perspiciatis officiis
