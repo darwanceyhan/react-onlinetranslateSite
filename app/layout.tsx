@@ -35,11 +35,15 @@ export default function RootLayout({
             </div>
             <div className="grid sm:grid-cols-2 grid-cols-1 gap-5 text-center">
               <div></div>
-              <div className="grid grid-cols-2 gap-5">
-                <button className="hover-underline-animation text-xl border-l-2 border-black pl-2">
+              <div className="grid grid-cols-3 gap-10">
+                <button className="hover-underline-animation text-base border-l-2 border-black pl-2">
+                  Giriş Yap
+                </button>
+
+                <button className="hover-underline-animation text-base border-l-2 border-black pl-2">
                   İletişim
                 </button>
-                <button className="hover-underline-animation text-xl border-l-2 border-black pl-2">
+                <button className="hover-underline-animation text-base border-l-2 border-black pl-2">
                   Hakkımızda
                 </button>
               </div>
