@@ -15,7 +15,7 @@ html,body{
 }
 
 .linear-bg {
-    background: linear-gradient(350deg, #ffffff, #e4e4e4, #b7b6b6);
+    background: linear-gradient(350deg, #ffffff, #e4e4e4, #e5e4e4);
     background-size: 600% 600%;
 
     -webkit-animation: AnimationName 10s ease infinite;

@@ -13,7 +13,7 @@ export default function RootLayout({
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
-      <body className="linear-bg">
+      <body className="linear-bg appear">
         <div className="container">
           <div className="grid xl:grid-cols-2 sm:grid-cols-2 gap-4 mt-20">
             <div className="text-3xl font-bold mx-10 flex md:mx-20 text-center cursor-pointer hover:scale-105 transition-all">
@@ -59,7 +59,7 @@ export default function RootLayout({
         {children}
         <footer className="h-28 mt-40 grid">
           <div className="mt-20 bg-black grid text-white w-auto h-full text-center text-base content-center">
-            <h1>ONLINE TRANSLATE © 2021. Tüm hakları saklıdır. | </h1>
+            <h1>ONLINE TRANSLATE © 2023. Tüm hakları saklıdır. | </h1>
           </div>
         </footer>
       </body>
