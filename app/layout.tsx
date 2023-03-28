@@ -13,7 +13,7 @@ export default function RootLayout({
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
-      <body className="linear-bg appear">
+      <body className="linear-bg appearall">
         <div className="container">
           <div className="grid xl:grid-cols-2 sm:grid-cols-2 gap-4 mt-20">
             <div className="text-3xl font-bold mx-10 flex md:mx-20 text-center cursor-pointer hover:scale-105 transition-all">

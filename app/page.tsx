@@ -89,7 +89,7 @@ export default function Home() {
           Profesyonel Döküman Çeviri Hizmeti
         </h1>
       </div>
-      <div className="container mt-10 text-center mx-auto">
+      <div className="container mt-10 text-center mx-auto mb-80">
         <Link href={`/${isLogged ? "getaprice " : "login"}`}>
           <button className="hover-underline-animation text-xl border-l-2 border-black pl-4 p-2 text-center">
             Hemen Fiyat Alın

@@ -103,6 +103,13 @@ html,body{
     transform: translateY(-20px);
 }
 
+.appearall{
+    animation: appear 1s ease-in-out;
+    animation-fill-mode: forwards;
+    transition: all 0.2s ease-in-out;
+
+}
+
 @keyframes appear {
     0% {
         opacity: 0;
