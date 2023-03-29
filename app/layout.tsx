@@ -33,7 +33,7 @@ export default function RootLayout({
               </svg>
               <h1 className="text-center flex">ONLİNE TRANSLATE</h1>
             </div>
-            <div className="grid sm:grid-cols-2 grid-cols-1 gap-5 text-center">
+            <div className="grid sm:grid-cols-2 grid-cols-1 gap-5 text-center content-end">
               <div></div>
               <div className="grid grid-cols-3 gap-10">
                 <Link href="/">
