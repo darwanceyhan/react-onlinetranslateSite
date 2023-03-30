@@ -237,60 +237,55 @@ function GetaPrice() {
                 <div class="w-full md:w-1/2 lg:w-1/3 p-4 ">
                   <div class="flex flex-col rounded border-2 cardBoxShadow">
                     <div class="py-5 text-black bg-white">
-                      <h3>Basic</h3>
+                      <h3>Standart</h3>
                       <p class="text-5xl font-bold">
                         $19.<span class="text-3xl">95</span>
                       </p>
-                      <p class="text-xs uppercase">Per Month</p>
                     </div>
                     <div class="py-5 bg-black text-white rounded-b">
                       <p>Feature of the plan</p>
                       <p>Another feature plan feature</p>
                       <p>Yet another plan feature</p>
-                      <button class="px-5 py-2 mt-5 uppercase rounded bg-white text-black font-semibold hover:bg-blue-900 hover:text-white">
+                      <button class="px-5 py-2 mt-5 uppercase rounded bg-white text-black font-semibold hover:bg-slate-300">
                         Get Started
                       </button>
                     </div>
                   </div>
                 </div>
-                <div class="w-full md:w-1/2 lg:w-1/3 p-4">
-                  <div class="flex flex-col rounded">
-                    <div class="py-7 bg-blue-700 text-white rounded-t">
-                      <h2 class="uppercase text-yellow-300 font-extrabold">
-                        Most Popular
-                      </h2>
-                      <h3>Standard</h3>
+                <div class="w-full md:w-1/2 lg:w-1/3 p-4 ">
+                  <div class="flex flex-col rounded cardBoxShadow">
+                    <div class="py-7 bg-white text-black rounded-t">
+                      <h2 class="uppercase font-extrabold">En Popüler!!!</h2>
+                      <h3>Standard + Hızlandırılmış</h3>
                       <p class="text-5xl font-bold">
                         $49.<span class="text-3xl">95</span>
                       </p>
-                      <p class="text-xs uppercase">Per Month</p>
                     </div>
                     <div>
-                      <div class="pt-1 pb-7 bg-blue-700 text-white rounded-b">
+                      <div class="pt-1 pb-7 bg-black text-white rounded-b">
                         <p>Feature of the plan</p>
                         <p>Another feature plan feature</p>
                         <p>Yet another plan feature</p>
-                        <button class="px-5 py-2 mt-5 uppercase rounded bg-yellow-300 text-blue-700 font-semibold hover:bg-blue-900 hover:text-white">
+                        <button class="px-5 py-2 mt-5 uppercase rounded bg-white text-black font-semibold hover:bg-slate-300">
                           Get Started
                         </button>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="w-full md:w-1/2 lg:w-1/3 p-4">
-                  <div class="flex flex-col rounded border-2 border-blue-700 bg-blue-700">
-                    <div class="py-5 text-blue-700 bg-white">
-                      <h3>Advanced</h3>
+                <div class="w-full md:w-1/2 lg:w-1/3 p-4 ">
+                  <div class="flex flex-col rounded border-2 cardBoxShadow">
+                    <div class="py-5 text-black bg-white">
+                      <h3>Geniş Paket + Hızlandırılmış</h3>
                       <p class="text-5xl font-bold">
-                        $99.<span class="text-3xl">95</span>
+                        $89.<span class="text-3xl">95</span>
                       </p>
-                      <p class="text-xs uppercase">Per Month</p>
                     </div>
-                    <div class="py-5 bg-blue-700 text-white rounded-b">
+                    <div class="py-5 bg-black text-white rounded-b">
                       <p>Feature of the plan</p>
                       <p>Another feature plan feature</p>
                       <p>Yet another plan feature</p>
-                      <button class="px-5 py-2 mt-5 uppercase rounded bg-white text-blue-700 font-semibold hover:bg-blue-900 hover:text-white">
+                      <button class="px-5 py-2 mt-5 uppercase rounded bg-white text-black font-semibold hover:bg-slate-300">
                         Get Started
                       </button>
                     </div>
