@@ -13,7 +13,8 @@ function GetaPrice() {
   const [price, setPrice] = useState(null);
   useEffect(() => {
     console.log(mammoth);
-  }, []);
+    console.log(language);
+  }, [language]);
 
   async function readDocxAndTxtFile(file) {
     const reader = new FileReader();
@@ -44,10 +45,15 @@ function GetaPrice() {
       text = matches
         ? matches.map((match) => match.replace(/<\/?w:t[^>]*>/g, "")).join(" ")
         : "";
+      setIsUploaded(true);
     } else if (type === "text/plain") {
       text = new TextDecoder().decode(buffer);
+      setIsUploaded(true);
     } else {
-      throw new Error("Invalid file type");
+      alert(
+        "Dosya türü desteklenmiyor. Lütfen .docx veya .txt uzantılı dosya yükleyin."
+      );
+      setIsUploaded(false);
     }
 
     const wordCount = text.split(/\s+/).length;
@@ -187,7 +193,13 @@ function GetaPrice() {
           </div>
           <div className="mx-auto grid grid-cols-2 gap-10 mt-10 sm:mt-0">
             <div className="mx-auto">
-              <select className=" w-full text-sm text-slate-500">
+              <select
+                id="language1"
+                onChange={(e) => {
+                  setLanguage(e.target.value, [language[0]]);
+                }}
+                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              >
                 <option value="" selected>
                   Hangi dilden
                 </option>
@@ -202,7 +214,13 @@ function GetaPrice() {
               </select>
             </div>
             <div className="mx-auto">
-              <select className=" w-full text-sm text-slate-500">
+              <select
+                id="language2"
+                onChange={(e) => {
+                  setLanguage([language[0], e.target.value]);
+                }}
+                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              >
                 <option value="" selected>
                   Hangi dile
                 </option>
@@ -219,7 +237,16 @@ function GetaPrice() {
                 <button
                   className="hover-underline-animation text-base sm:text-xl  border-l-2 border-black mt-20 pl-4 p-2 text-center text-black font-bold flex justify-end"
                   onClick={() => {
-                    setLevel([false, true, false]);
+                    if (isUploaded) {
+                      setLevel([false, true, false]);
+                    } else if (
+                      document.getElementById("language1").value ===
+                      document.getElementById("language2").value
+                    ) {
+                      alert("Aynı dilden aynı dile çeviri yapamazsınız.");
+                    } else {
+                      alert("Lütfen bir dosya seçiniz.");
+                    }
                   }}
                 >
                   Sonraki Adım
@@ -306,6 +333,28 @@ function GetaPrice() {
                       </button>
                     </div>
                   </div>
+                </div>
+              </div>
+              <div className="grid grid-cols-2">
+                <div className="flex justify-start">
+                  <button
+                    className="hover-underline-animation text-base sm:text-xl  border-l-2 border-black mt-20 pl-4 p-2 text-center text-black font-bold"
+                    onClick={() => {
+                      setLevel([true, false, false]);
+                    }}
+                  >
+                    Önceki Adım
+                  </button>
+                </div>
+                <div className="flex justify-end">
+                  <button
+                    className="hover-underline-animation text-base sm:text-xl  border-l-2 border-black mt-20 pl-4 p-2 text-center text-black font-bold flex justify-end"
+                    onClick={() => {
+                      setLevel([false, false, true]);
+                    }}
+                  >
+                    Sonraki Adım
+                  </button>
                 </div>
               </div>
             </div>
