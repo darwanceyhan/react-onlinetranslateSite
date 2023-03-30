@@ -67,7 +67,7 @@ function GetaPrice() {
             className={`${
               level[0]
                 ? "bg-white w-10 h-10 mx-auto grid content-center text-center rounded-full"
-                : "bg-black  w-10 h-10 mx-auto grid content-center text-center rounded-full"
+                : "bg-black text-white w-10 h-10 mx-auto grid content-center text-center rounded-full"
             }  `}
             style={{ borderRadius: "50%" }}
           >
@@ -89,21 +89,75 @@ function GetaPrice() {
             Dosyanızı yükleyin ve hangi dilde çevrileceğini seçin.
           </p>
         </div>
-        <div className="mx-auto">
+        <div
+          className={`${
+            level[1]
+              ? "bg-black mx-auto w-full grid content-center"
+              : "mx-auto w-full grid content-center"
+          } `}
+        >
           <div
-            className="w-10 h-10 mx-auto bg-black grid content-center text-white text-center rounded-full"
+            className={`${
+              level[1]
+                ? "bg-white w-10 h-10 mx-auto grid content-center text-center rounded-full"
+                : "bg-black text-white w-10 h-10 mx-auto grid content-center text-center rounded-full"
+            }  `}
             style={{ borderRadius: "50%" }}
           >
             2
           </div>
+          <h1
+            className={`${
+              level[1] ? "text-white" : "text-black"
+            } "font-bold text-xl sm:text-2xl text-center `}
+          >
+            Paket Seç
+          </h1>
+          <p
+            className={`${
+              level[1]
+                ? "text-white text-sm sm:text-base text-center"
+                : "text-black text-sm sm:text-base text-center"
+            }
+           }`}
+          >
+            Çeviri paketlerimizden birini seçin.
+          </p>
         </div>
-        <div className="mx-auto">
+        <div
+          className={`${
+            level[2]
+              ? "bg-black mx-auto w-full grid content-center"
+              : "mx-auto w-full grid content-center"
+          } `}
+        >
           <div
-            className="w-10 h-10 mx-auto bg-black grid content-center text-white text-center rounded-full"
+            className={`${
+              level[2]
+                ? "bg-white w-10 h-10 mx-auto grid content-center text-center rounded-full"
+                : "bg-black text-white w-10 h-10 mx-auto grid content-center text-center rounded-full"
+            }  `}
             style={{ borderRadius: "50%" }}
           >
             3
           </div>
+          <h1
+            className={`${
+              level[2] ? "text-white" : "text-black"
+            } "font-bold text-xl sm:text-2xl text-center `}
+          >
+            Ödeme Yap
+          </h1>
+          <p
+            className={`${
+              level[2]
+                ? "text-white text-sm sm:text-base text-center"
+                : "text-black text-sm sm:text-base text-center"
+            }
+           }`}
+          >
+            Ödeme işlemini tamamlayın.
+          </p>
         </div>
       </div>
 
@@ -172,6 +226,43 @@ function GetaPrice() {
           </div>
         </div>
       ) : null}
+      {
+        //level 2 , cards
+        level[1] ? (
+          <div className="w-4/5 h-3/5 grid grid-cols-1 mx-auto mt-32 sm:mt-10 place-content-center">
+            <div className="mx-auto">
+              <section className="py-6 dark:bg-gray-800 dark:text-gray-50">
+                <div className="container mx-auto flex flex-col items-center justify-center max-w-lg p-4 lg:max-w-full sm:p-10 lg:flex-row">
+                  <div className="flex flex-col items-center justify-center flex-1 p-4 pb-8 sm:p-8 lg:p-16 dark:bg-gray-900">
+                    <span className="text-sm">Basic</span>
+                    <p className="text-5xl font-bold text-center">39€</p>
+                    <p className="font-semibold text-center">
+                      Nemo deserunt possimus quo provident recusandae! Dolores
+                      qui architecto omnis pariatur eos voluptatibus sequi cum,
+                      non nesciunt aspernatur a?
+                    </p>
+                    <button className="px-8 py-3 mt-6 text-lg font-semibold border rounded sm:mt-12 dark:border-gray-700">
+                      Sign up
+                    </button>
+                  </div>
+                  <div className="flex flex-col items-center justify-center flex-1 p-4 pb-8 text-center rounded-md sm:p-8 lg:p-16 dark:bg-violet-400 dark:text-gray-900">
+                    <span className="text-sm font-semibold">Advanced</span>
+                    <p className="text-5xl font-bold">89€</p>
+                    <p className="font-semibold">
+                      Nemo deserunt possimus quo provident recusandae! Dolores
+                      qui architecto omnis pariatur eos voluptatibus sequi cum,
+                      non nesciunt aspernatur a?
+                    </p>
+                    <button className="px-8 py-3 mt-6 text-lg font-semibold rounded sm:mt-12 dark:bg-gray-800 dark:text-gray-50">
+                      Sign up
+                    </button>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        ) : null
+      }
     </div>
   );
 }
