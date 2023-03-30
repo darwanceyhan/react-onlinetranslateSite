@@ -8,7 +8,8 @@ import JSZip from "jszip";
 function GetaPrice() {
   const [level, setLevel] = useState([true, false, false]);
   const [count, setCount] = useState(0);
-  const [language, setLanguage] = useState(null);
+  const [language, setLanguage] = useState([]);
+  const [isUploaded, setIsUploaded] = useState(false);
   const [price, setPrice] = useState(null);
   useEffect(() => {
     console.log(mammoth);
@@ -55,7 +56,7 @@ function GetaPrice() {
   }
   return (
     <div className="w-full h-3/6 mx-auto mt-56">
-      <div className="w-4/5 h-2/5 grid grid-cols-1 sm:grid-cols-3 mx-auto">
+      <div className="w-4/5 h-3/5 sm:h-2/5 grid grid-cols-1 sm:grid-cols-3 mx-auto">
         <div
           className={`${
             level[0]
@@ -246,8 +247,13 @@ function GetaPrice() {
                       <p>Feature of the plan</p>
                       <p>Another feature plan feature</p>
                       <p>Yet another plan feature</p>
-                      <button class="px-5 py-2 mt-5 uppercase rounded bg-white text-black font-semibold hover:bg-slate-300">
-                        Get Started
+                      <button
+                        onClick={() => {
+                          setIsUploaded([true, false, false]);
+                        }}
+                        class="px-5 py-2 mt-5 uppercase rounded bg-white text-black font-semibold hover:bg-slate-300"
+                      >
+                        {isUploaded[0] ? "SEÇİLDİ" : "SEÇ"}
                       </button>
                     </div>
                   </div>
@@ -266,8 +272,13 @@ function GetaPrice() {
                         <p>Feature of the plan</p>
                         <p>Another feature plan feature</p>
                         <p>Yet another plan feature</p>
-                        <button class="px-5 py-2 mt-5 uppercase rounded bg-white text-black font-semibold hover:bg-slate-300">
-                          Get Started
+                        <button
+                          onClick={() => {
+                            setIsUploaded([false, true, false]);
+                          }}
+                          class="px-5 py-2 mt-5 uppercase rounded bg-white text-black font-semibold hover:bg-slate-300"
+                        >
+                          {isUploaded[1] ? "SEÇİLDİ" : "SEÇ"}
                         </button>
                       </div>
                     </div>
@@ -285,8 +296,13 @@ function GetaPrice() {
                       <p>Feature of the plan</p>
                       <p>Another feature plan feature</p>
                       <p>Yet another plan feature</p>
-                      <button class="px-5 py-2 mt-5 uppercase rounded bg-white text-black font-semibold hover:bg-slate-300">
-                        Get Started
+                      <button
+                        onClick={() => {
+                          setIsUploaded([false, false, true]);
+                        }}
+                        class="px-5 py-2 mt-5 uppercase rounded bg-white text-black font-semibold hover:bg-slate-300"
+                      >
+                        {isUploaded[2] ? "SEÇİLDİ" : "SEÇ"}
                       </button>
                     </div>
                   </div>

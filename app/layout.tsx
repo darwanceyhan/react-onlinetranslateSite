@@ -58,11 +58,11 @@ export default function RootLayout({
 
         {children}
 
-        <div className="h-28 mt-56 grid">
+        {/* <div className="h-28 mt-56 grid">
           <div className="mt-20 bg-black grid text-white w-auto h-full text-center text-base content-center">
             <h1>ONLINE TRANSLATE © 2023. Tüm hakları saklıdır. | </h1>
           </div>
-        </div>
+        </div> */}
       </body>
     </html>
   );
