@@ -124,3 +124,12 @@ html,body{
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
+.cardBoxShadow{
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    transition: all 0.2s ease-in-out;
+}
+.cardBoxShadow:hover{
+    transform: translateY(-20px);
+}
+  
+

@@ -229,20 +229,30 @@ function GetaPrice() {
       {
         //level 2 , cards
         level[1] ? (
-          <div className="w-4/5 h-3/5 grid grid-cols-1 mx-auto mt-52 sm:mt-10 place-content-center">
-            <div className="mx-auto grid grid-cols-2">
-              <div className="grid bg-neutral-300 flex-col items-center justify-center p-4 pb-8 sm:p-4 lg:p-8 dark:bg-gray-900">
-                <p className="text-5xl font-bold text-center">STANDART 39€</p>
-                <p className="font-semibold text-center">
-                  Nemo deserunt possimus quo provident recusandae! Dolores qui
-                  architecto omnis pariatur eos voluptatibus sequi cum, non
-                  nesciunt aspernatur a?
-                </p>
+          <div className="w-4/5 h-3/5 grid grid-cols-1 mx-auto mt-52 sm:mt-20 place-content-center">
+            <div className="mx-auto grid grid-cols-2 mt-20">
+              <div className="grid bg-neutral-300 w-3/6 mx-auto items-center p-4 pb-8 sm:p-4 lg:p-8 dark:bg-gray-900">
+                <span className="text-sm text-center font-semibold">Basic</span>
+                <p className="text-5xl font-bold text-center">39€</p>
+                <ul className="list-disc">
+                  <li className="text-md font-semibold text-center mt-10">
+                    Lorem ipsum dolor sit amet.
+                  </li>
+                  <li className="text-md font-semibold text-center mt-10">
+                    Lorem ipsum dolor sit amet.
+                  </li>
+                  <li className="text-md font-semibold text-center mt-10">
+                    Lorem ipsum dolor sit amet.
+                  </li>
+                  <li className="text-md font-semibold text-center mt-10">
+                    Lorem ipsum dolor sit amet.
+                  </li>
+                </ul>
                 <button className="px-8 py-3 mt-6 text-lg font-semibold border rounded sm:mt-12 dark:border-gray-700">
                   Sign up
                 </button>
               </div>
-              <div className="grid bg-neutral-300 items-center justify-center flex-1 p-4 pb-8 text-center rounded-md sm:p-8 lg:p-8 dark:bg-violet-400 dark:text-gray-900">
+              <div className="grid bg-neutral-300 w-3/6 items-center mx-auto p-4 pb-8 text-center rounded-md sm:p-8 lg:p-8 dark:bg-violet-400 dark:text-gray-900">
                 <span className="text-sm font-semibold">Advanced</span>
                 <p className="text-5xl font-bold">89€</p>
                 <p className="font-semibold">
